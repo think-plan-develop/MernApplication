@@ -1,0 +1,101 @@
+.body{
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* height: 20vh; */
+  /* background-color: #240229; */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+.loader{
+  align-items: center;
+  justify-content: center;
+  position:relative;
+  width:50px;
+  height:50px;
+  border-radius:50%;
+  background:linear-gradient(#14ffe9,#ffeb3b,#ff00e0);
+  animation:animate 2s linear infinite 
+}
+
+  @keyframes animate{
+    0%{transform:rotate(0deg);
+    }
+    15%{
+      transform:rotate(180deg)
+    }
+    25%{
+      transform:rotate(360deg)
+    }
+    35%{
+      transform:rotate(360deg)
+    }
+    65%{
+      transform:rotate(180deg)
+    }
+      
+      50%{
+        transform:rotate(-360deg)
+      }
+      75%{
+        transform:rotate(-360deg)
+      }
+        
+      85%{
+        transform:rotate(360deg)
+      }
+        
+        
+    100%{
+    transform:rotate(360deg)}
+    }
+    
+  
+  .loader span{
+  position:absolute;
+  width:100px;
+  height:100px;
+  border-radius:50%;
+  background:linear-gradiant(#14ffe9,#ffeb3b,#ff00e0);
+  
+ 
+  }
+  
+  .loader span:nth-child(1){
+  filter:blur(5px)
+  }
+  
+  .loader span:nth-child(2){
+  filter:blur(10px)
+  }
+  
+  .loader span:nth-child(3){
+  filter:blur(25px)
+  }
+  
+  .loader span:nth-child(4){
+  filter:blur(50px)
+  }
+  .loader:after{
+  content:"";
+  position:absolute;
+  top:10px;
+  left:10px;
+  right:10px;
+  bottom:10px;
+  background:#f0f0f5;
+  border-radius:50%  ;
+
+  
+  
+  
+ }
+  
+  
+  
+
+ 

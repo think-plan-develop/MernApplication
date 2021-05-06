@@ -1,0 +1,74 @@
+.home-page{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 91vh;
+    width: 100%;
+    background: rgb(219,207,255);
+background: linear-gradient(90deg, rgba(219,207,255,0.9836309523809523) 50%, rgba(255,255,255,1) 50%);
+}
+
+@media only screen and (max-width: 770px) {
+    .home-div{
+        /* margin-left: 30px; */
+        text-align: center;
+    }
+}
+
+
+
+.Mern{
+    width: 300px;
+    margin-bottom: 110px;
+    
+}
+
+
+.f::before {
+    content: "Welcome to ";
+    color: rgb(68, 68, 67);
+    font-weight: bold;
+    font-size: 40px;
+   
+   
+  }
+  .f::after {
+    content: "Developer";
+    color: rgb(7, 89, 241);
+    font-size: 40px;
+    font-weight: bolder;
+  
+   
+  }
+
+  @media only screen and (max-width: 750px) {
+
+    .f::after {
+        content: "Developer";
+        font-size: 40px;
+        font-weight: bolder;
+        margin: auto;
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+       
+      
+       
+      }
+
+      .f::before {
+        content: "We Are The";
+        font-weight: bold;
+        font-size: 40px;  
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+       
+      }
+
+      .Mern{
+          margin-bottom: 0;
+      }
+  }

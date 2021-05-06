@@ -1,0 +1,35 @@
+.error{
+    
+    height: 100vh;
+    width: 100%;
+
+    /* background-image: none; */ 
+}
+
+/* filter: brightness(120%); */
+.one{
+   
+    
+   /* height: 45vh; */
+   /* width: 80%; */
+   text-align: center;
+   
+}
+
+
+.errorsub2{
+  width: 15%;
+   align-items: center;
+   align-self: center;
+
+  justify-content: center; 
+   margin: auto;
+    /* background-color: cadetblue; */
+} 
+.errorsub{
+    text-align: center;
+}
+
+.two{
+    height: 40vh;
+}
