@@ -12,6 +12,9 @@ import LockIcon from '@material-ui/icons/Lock';
 import TextField  from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 
+import { ToastContainer, toast } from 'react-toastify';
+
+
 // ! import images
 import Registration from '../Images/Registration.svg'
 
@@ -54,25 +57,26 @@ const PostData= async (e)=>{
 
     const dataRes=await res.json();
     if(res.status===201){
-        window.alert("registered successfuly")
-         history.push("/login")
+        toast.success('🦄 User Registered Successfully ✔ ');
+        history.push("/login")
          }
        else if(res.status===422 || !dataRes){  
             window.alert("please filled the all fields")
         }
         else if(res.status===423 ){
-            window.alert("confirm Password should matched  password")
+            toast.warn("❌, confirm Password should matched  password")
         }
         else if(res.status===424 ){
             window.alert("User Email already exist")
         }
         
-        if(res.status===201){
-       window.alert("registered successfuly")
-        history.push("/login")
-        }
+    //     if(res.status===201){
+    //    window.alert("registered successfuly")
+    //     history.push("/login")
+    //     }
         else{
-            window.alert("registeration failed")
+         
+            toast.warn('❌ registration failed ❌');
         }
 }
    
