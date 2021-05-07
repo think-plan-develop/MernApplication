@@ -53,7 +53,11 @@ const PostData= async (e)=>{
 
 
     const dataRes=await res.json();
-        if(dataRes.status===422 || !dataRes){  
+    if(dataRes.status===201){
+        window.alert("registered successfuly")
+         history.push("/login")
+         }
+       else if(dataRes.status===422 || !dataRes){  
             window.alert("please filled the all fields")
         }
         else if(dataRes.status===423 ){
@@ -63,7 +67,7 @@ const PostData= async (e)=>{
             window.alert("User Email already exist")
         }
         
-        else if(dataRes.status===201){
+        if(dataRes.status===201){
        window.alert("registered successfuly")
         history.push("/login")
         }
