@@ -72,9 +72,9 @@ const PostData= async (e)=>{
     //    window.alert("registered successfuly")
     //     history.push("/login")
     //     }
-        else if(res.status===201) {
+        else  {
            
-                toast.info('🦄 User Registered Successfully ✔ ');
+                toast.warn('🦄 User Registered Successfully ✔ ');
                 history.push("/login")
                  }
        

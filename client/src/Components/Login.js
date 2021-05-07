@@ -55,7 +55,7 @@ const history=useHistory();
         }
         else{
             dispatch({type:"USER",payload:true})
-           toast.info("login successfully")
+           toast.warn("login successfully")
             history.push("/")
 
         }
