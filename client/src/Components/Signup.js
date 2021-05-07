@@ -57,18 +57,15 @@ const PostData= async (e)=>{
 
 
     const dataRes=await res.json();
-    if(res.status===201){
-        toast.success('🦄 User Registered Successfully ✔ ');
-        history.push("/login")
-         }
-       else if(res.status===422 || !dataRes){  
-        toast.info("please filled the all fields")
+    
+        if(res.status===422 || !dataRes){  
+            toast.warn("please filled the all fields")
         }
         else if(res.status===423 ){
-            toast.info("❌, confirm Password should matched  password")
+            toast.holy("❌, confirm Password should matched  password")
         }
         else if(res.status===424 ){
-            toast.info("User Email already exist")
+            toast.warn("User Email already exist")
         }
         
     //     if(res.status===201){
@@ -76,8 +73,10 @@ const PostData= async (e)=>{
     //     history.push("/login")
     //     }
         else{
-         
-            toast.warn('❌ registration failed ❌');
+            {
+                toast.success('🦄 User Registered Successfully ✔ ');
+                history.push("/login")
+                 }
         }
 }
    
