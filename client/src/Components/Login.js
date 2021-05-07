@@ -55,7 +55,7 @@ const history=useHistory();
         }
         else{
             dispatch({type:"USER",payload:true})
-            windows.alert("LOGIN SUCCESSFULLY")
+            window.alert("LOGIN SUCCESSFULLY")
            toast.warn("login successfully")
             history.push("/")
 
