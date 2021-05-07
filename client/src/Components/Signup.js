@@ -73,7 +73,7 @@ const PostData= async (e)=>{
     //     history.push("/login")
     //     }
         else  {
-           
+                windows.alert(" Registered SUCCESSFULLY")
                 toast.warn('🦄 User Registered Successfully ✔ ');
                 history.push("/login")
                  }
