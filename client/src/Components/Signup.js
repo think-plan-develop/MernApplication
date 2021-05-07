@@ -53,23 +53,27 @@ const PostData= async (e)=>{
 
 
     const dataRes=await res.json();
-        if(dataRes.status===422 || !dataRes){
+        if(dataRes.status===422 || !dataRes){  
             window.alert("please filled the all fields")
         }
-        else if(dataRes.status===423 || !dataRes){
+        else if(dataRes.status===423 ){
             window.alert("confirm Password should matched  password")
         }
-        else if(dataRes.status===424 || !dataRes){
+        else if(dataRes.status===424 ){
             window.alert("User Email already exist")
         }
         
-
-        else(window.alert("registered successfuly"))
+        else if(dataRes.status===201){
+       window.alert("registered successfuly")
         history.push("/login")
+        }
+        else{
+            window.alert("registeration failed")
+        }
 }
    
     return(<>
-    <div className="imgofreg"  style={{  backgroundImage:`url(${Registration})`,width:"100%"}}>
+    <div className="imgofreg"  style={{ width:"100%"}}>
    <div className="second">
    
         <section className="signup">
@@ -77,7 +81,7 @@ const PostData= async (e)=>{
             <div className="container">
               
                 <div className="signup-content   row">
-                    <div className="signup-form col-10 offset-3 offset-md-0 col-sm-7">
+                    <div className="signup-form col-10 offset-2 offset-md-0 col-sm-7">
                         
                         <h3 className="form-title mt-3">Sign up</h3>
                             <form method="POST" className="registration-from mt-5" id="registration-from">
@@ -164,12 +168,15 @@ const PostData= async (e)=>{
                                         </div>
                                         
                         
-                         <div className="signup-image col-5">
+                         <div className="signup-image col-0 col-sm-0 col-md-5 ">
+                             <div className="imageofsignup ">
                                         <img src={Registration}  alt="img"/>
-                                            <NavLink to="/login" >I am Already Register</NavLink>
-                                           
-
+                                        </div>
+                                        <div className="text-center">
+                                           <Button variant="contained" color="secondary"  > <NavLink to="/login" >I am Already registered</NavLink> 
+                                           </Button>
                                             </div>
+                                             </div>
                     </div>
                     </div>
             </section>

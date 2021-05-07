@@ -4,14 +4,12 @@
 
 
 
-
 .signup{
-
     display: flex;
     justify-content: center;
     align-items: center;
 
-    height: 91vh;
+    height: 100vh;
     width: 100%;
     /* background-color: rgb(238, 238, 247); */
     
@@ -21,35 +19,38 @@
      display: flex;
     overflow: hidden;
 
- height: 85vh; 
-    width: 60%; 
+ height: 100vh; 
+    width: 70%; 
     background-color: rgb(253, 253, 253);
     margin-bottom: 10px;
-    border-radius: 10px;
-    box-shadow: 5px 10px 18px #888888;
+    /* border-radius: 10px;
+    box-shadow: 5px 10px 18px #888888; */
 }
 
 
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 770px) {
   
 .container{
     background-color: rgb(255, 255, 255);
-    height: 85vh;
-    width: 90%;
+    height: 100vh;
+    width: 100%;
+    /* margin-top:25px; */
     /* margin-right: 100px; */
-    /* background-image: image(Registration); */
+    /* background-image: none; */
 }
 .signin{
     height: 100vh;
 }
+.imageofsignup {
+        display: none;
+}
+
 
 }
 
 
-.signup-image img{  width:100%;
-    margin-top: 15vh;
- }
+
   .signin-form img{
     width:100%;
    /* margin-top: 10vh;s */
@@ -80,4 +81,29 @@
 
     /* css for login */
 
+  
+
    
+    
+@media only screen and (min-width: 770px) {
+
+    .imgofreg{
+        background-image:none;
+        background-image: url('../Images/Registration.svg');
+    }
+
+    .signup-image img{  width:100%;
+        margin-top: 15vh;
+     }
+
+
+     .signup{
+     height:100vh;
+}
+.container{
+border-radius: 10px;
+box-shadow: 5px 10px 18px #888888;
+}
+
+}
+
