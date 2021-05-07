@@ -53,21 +53,21 @@ const PostData= async (e)=>{
 
 
     const dataRes=await res.json();
-    if(dataRes.status===201){
+    if(res.status===201){
         window.alert("registered successfuly")
          history.push("/login")
          }
-       else if(dataRes.status===422 || !dataRes){  
+       else if(res.status===422 || !dataRes){  
             window.alert("please filled the all fields")
         }
-        else if(dataRes.status===423 ){
+        else if(res.status===423 ){
             window.alert("confirm Password should matched  password")
         }
-        else if(dataRes.status===424 ){
+        else if(res.status===424 ){
             window.alert("User Email already exist")
         }
         
-        if(dataRes.status===201){
+        if(res.status===201){
        window.alert("registered successfuly")
         history.push("/login")
         }
