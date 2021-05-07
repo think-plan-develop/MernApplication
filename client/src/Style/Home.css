@@ -33,7 +33,7 @@ background: linear-gradient(90deg, rgba(219,207,255,0.9836309523809523) 50%, rgb
    
   }
   .f::after {
-    content: "Developer";
+    content: "Development";
     color: rgb(7, 89, 241);
     font-size: 40px;
     font-weight: bolder;
@@ -44,7 +44,7 @@ background: linear-gradient(90deg, rgba(219,207,255,0.9836309523809523) 50%, rgb
   @media only screen and (max-width: 750px) {
 
     .f::after {
-        content: "Developer";
+        content: "Development";
         font-size: 40px;
         font-weight: bolder;
         margin: auto;
@@ -58,7 +58,7 @@ background: linear-gradient(90deg, rgba(219,207,255,0.9836309523809523) 50%, rgb
       }
 
       .f::before {
-        content: "We Are The";
+        content: "Welcome to";
         font-weight: bold;
         font-size: 40px;  
         display: flex;
