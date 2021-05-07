@@ -11,6 +11,8 @@ import Button from '@material-ui/core/Button';
 import LogIn from '../Images/LogIn.svg'
 
 import {UserContext} from "../App";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Login=()=>{
 
@@ -49,11 +51,11 @@ const history=useHistory();
 
         const data=res.json();
         if(res.status===400 || !data){
-           window.alert("invalid credential")
+            toast.warn("invalid credential");
         }
         else{
             dispatch({type:"USER",payload:true})
-            window.alert("login successfully")
+           toast.success("login successfully")
             history.push("/")
 
         }
@@ -127,7 +129,12 @@ const history=useHistory();
              </div>
     </section>
 
-    
+    <ToastContainer position = "top-center"
+                    autoClose={2500}
+                    hideProgressBar={false}
+                    newestOnTop={false}
+                    closeOnClick rtl={false}
+                    pauseOnFocusLoss draggable pauseOnHover />
     </>)
 }
 export default Login;

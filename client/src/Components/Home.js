@@ -2,7 +2,7 @@ import React, { useState,useEffect } from 'react';
 import "../App.css"
 import "../Style/Home.css"
 import mern from "../Images/MERN-Stack.png"
-import ToastComp from "./ToastComp"
+
 
 // import PhoneAndroidIcon from '@material-ui/icons/PhoneAndroid';
 

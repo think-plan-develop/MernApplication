@@ -62,7 +62,7 @@ const PostData= async (e)=>{
             toast.warn("please filled the all fields")
         }
         else if(res.status===423 ){
-            toast.holy("❌, confirm Password should matched  password")
+            toast.warn("❌, confirm Password should matched  password")
         }
         else if(res.status===424 ){
             toast.warn("User Email already exist")
