@@ -13,6 +13,7 @@ import TextField  from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 
 import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 // ! import images
@@ -61,13 +62,13 @@ const PostData= async (e)=>{
         history.push("/login")
          }
        else if(res.status===422 || !dataRes){  
-            window.alert("please filled the all fields")
+        toast.info("please filled the all fields")
         }
         else if(res.status===423 ){
-            toast.warn("❌, confirm Password should matched  password")
+            toast.info("❌, confirm Password should matched  password")
         }
         else if(res.status===424 ){
-            window.alert("User Email already exist")
+            toast.info("User Email already exist")
         }
         
     //     if(res.status===201){
@@ -189,7 +190,7 @@ const PostData= async (e)=>{
                     </div>
             </section>
             <ToastContainer position = "top-center"
-                    autoClose={5000}
+                    autoClose={3000}
                     hideProgressBar={false}
                     newestOnTop={false}
                     closeOnClick rtl={false}
