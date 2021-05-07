@@ -72,12 +72,12 @@ const PostData= async (e)=>{
     //    window.alert("registered successfuly")
     //     history.push("/login")
     //     }
-        else{
-            {
-                toast.success('🦄 User Registered Successfully ✔ ');
+        else if(res.status===201) {
+           
+                toast.info('🦄 User Registered Successfully ✔ ');
                 history.push("/login")
                  }
-        }
+       
 }
    
     return(<>
@@ -88,10 +88,10 @@ const PostData= async (e)=>{
          
             <div className="container">
               
-                <div className="signup-content   row">
+                <div className="signup-content  row">
                     <div className="signup-form col-10 offset-2 offset-md-0 col-sm-7">
                         
-                        <h3 className="form-title mt-3">Sign up</h3>
+                        <h3 className="form-title mt-5">Sign up</h3>
                             <form method="POST" className="registration-from mt-5" id="registration-from">
 
 
