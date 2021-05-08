@@ -19,7 +19,7 @@ const Navbar=()=>{
         </li>
 
         <li className="nav-item">
-          <NavLink activeClassName="menu_active" className="nav-link bg-danger" exact to="/contact">Contact</NavLink>
+          <NavLink activeClassName="menu_active" className="nav-link" exact to="/contact">Contact</NavLink>
         </li>
         
   <li className="nav-item">
