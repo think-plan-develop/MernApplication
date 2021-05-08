@@ -61,6 +61,9 @@ const PostData= async (e)=>{
         if(res.status===422 || !dataRes){  
             toast.warn("please filled the all fields")
         }
+        else if(res.status===420 ){
+            toast.warn("Phone should be a number")
+        }
         else if(res.status===423 ){
             toast.warn("❌, confirm Password should matched  password")
         }

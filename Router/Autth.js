@@ -66,7 +66,16 @@ router.post("/register", async(req,res)=>{
         return res.status(423).json({error:"confirm Password should matched  password"})
         }
 
+      if(isNaN(phone)){
+               return res.status(420).json({error:"phone number should be number"})
+
+        }
+
+
     try{
+        
+        
+     
          const userExist=await User.findOne({email:email})
          if(userExist){ 
                            res.status(424).json({error:"User Email already exist"})
@@ -80,7 +89,8 @@ router.post("/register", async(req,res)=>{
              }
     }
     catch(e){console.log(e)}
-})
+}
+)
 
  
     
