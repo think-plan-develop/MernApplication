@@ -5,6 +5,7 @@ import "bootstrap/js/src/collapse.js";
 // import { NavLink } from "react-router-dom";
 import { NavLink } from 'react-router-dom/cjs/react-router-dom.min';
 import {UserContext} from "../App";
+import  "../Style/NavbarCss.css"
 
 const Navbar=()=>{
   const {state,dispatch}=useContext(UserContext)
@@ -13,12 +14,12 @@ const Navbar=()=>{
     if(state){
     return(<>
 
-                <li className="nav-item">
+                <li className="nav-item ">
           <NavLink activeClassName="menu_active" className="nav-link" exact to="/">Home</NavLink>
         </li>
 
         <li className="nav-item">
-          <NavLink activeClassName="menu_active" className="nav-link" exact to="/contact">Contact</NavLink>
+          <NavLink activeClassName="menu_active" className="nav-link bg-danger" exact to="/contact">Contact</NavLink>
         </li>
         
   <li className="nav-item">
@@ -70,12 +71,12 @@ const Navbar=()=>{
     return(<> 
   
 
-  <div className="container-fluid">
-  <div className="row">
-  <div className="col-12 max-auto">
+  <div className="">
+  <div className="row ">
+  <div className="col-12 ">
   
   
-  <nav className="navbar navbar-expand-lg navbar-light bg-light">
+  <nav className="navbar navbar-expand-lg navbar-dark text-center ">
 
 
               <div className="body">

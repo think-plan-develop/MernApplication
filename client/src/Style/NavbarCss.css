@@ -1,0 +1,16 @@
+.menu_active{
+    border-bottom:2px solid rgb(255, 255, 255) ;
+    border-top:2px solid rgb(253, 253, 253) ;
+   }
+   .navbar{
+    /* background: rgb(195, 204, 212); */
+    background: linear-gradient(90deg, rgba(12,122,228,1) 31%, rgba(26,28,52,0.9948354341736695) 82%);
+   }
+   .nav-link{
+       
+       font-weight: bolder;
+       margin: 2px;
+   }
+   .navbar-brand{
+       font-weight: bolder;
+   }
